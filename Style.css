@@ -1,39 +1,101 @@
-body {
-  font-family: Arial, sans-serif;
-  background: red;
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  color: #333;
+}
+
+/* Main Container */
 .container {
+  background: #ffffff;
   max-width: 500px;
-  margin: auto;
-  background: red;
-  padding: 50px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
+  width: 100%;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
 }
 
-.entry-section, .search-section {
+/* Title */
+.container h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Entry & Search Inputs */
+.entry-section,
+.search-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
 input[type="text"] {
-  width: 70%;
-  padding: 50px;
-  margin-right: 10px;
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  transition: border 0.3s;
 }
 
+input[type="text"]:focus {
+  border-color: #26a69a;
+}
+
+/* Buttons */
 button {
-  padding: 10px 15px;
+  background-color: #26a69a;
+  color: white;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+button:hover {
+  background-color: #2bbbad;
+}
+
+#installBtn {
+  display: none;
+  margin: 10px 0 20px;
+  width: 100%;
+}
+
+/* Entries */
 .results {
   border-top: 1px solid #ddd;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .entry {
-  padding: 5px 0;
-  border-bottom: 1px solid #eee;
+  background-color: #f4fdfd;
+  border: 1px solid #e0f2f1;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.entry:hover {
+  background-color: #e0f7fa;
 }
